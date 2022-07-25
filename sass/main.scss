@@ -90,10 +90,8 @@
     margin: auto;
 
     &__chart {
-      //   width: 40rem;
-      //   max-width: 500px;
-      //   height: 60rem;
-      //   cursor: none;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
 
     &__label {
@@ -159,6 +157,8 @@
 
       &__chart {
         height: 50rem;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
 
