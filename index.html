@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.min.js" integrity="sha512-zjlf0U0eJmSo1Le4/zcZI51ks5SjuQXkU0yOdsOBubjSmio9iCUp8XPLkEAADZNBdR9crRy3cniZ65LF2w8sRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="main">
+      <a href="https://www.frontendmentor.io/profile/blountdj" class="avatar--a"
+        ><img
+          src="https://avatars.githubusercontent.com/u/24497816?v=4"
+          alt="frontend mentor avatar"
+          class="avatar--img"
+          title="frontend mentor profile"
+      /></a>
+      <div class="wrapper">
+        <section class="balance">
+          <p class="balance__text">My balance</p>
+          <h1 class="balance__balance">$921.48</h1>
+          <div class="balance__logo">
+            <img src="images/logo.svg" alt="logo" class="balance__logo__icon" />
+          </div>
+        </section>
+        <section class="spending">
+          <h2 class="spending__h2">Spending - Last 7 days</h2>
+          <div class="spending__main">
+            <canvas id="myChart" class="spending__main__chart"></canvas>
+          </div>
+          <hr class="spending__hr" />
+          <div class="spending__total">
+            <p class="spending__total__text spending__total__text--1">Total this month</p>
+            <div class="spending__total__container">
+              <h3 class="spending__total__amount">$478.33</h3>
+              <h4 class="spending__total__change">+2.4%</h4>
+              <p class="spending__total__text spending__total__text--2">from last month</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Darren Blount</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

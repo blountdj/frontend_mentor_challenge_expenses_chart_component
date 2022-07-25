@@ -1,0 +1,178 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/attributions";
+
+.main {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.avatar {
+  &--a {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  &--img {
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid $color-cyan;
+    transition: all 0.2s;
+
+    &:hover {
+      // border: 1px solid $color-cyan;
+      box-shadow: 0px 0px 15px 0.3px rgba($color-cyan, 0.5);
+    }
+  }
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  gap: 2.5rem;
+  padding: 10rem 0;
+}
+
+.balance {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  padding: 2rem;
+  background-color: $color-soft-red;
+  color: $color-very-pale-orange;
+  border-radius: 1.8rem;
+  row-gap: 1.5rem;
+  width: auto;
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  &__balance {
+    font-size: 3.5rem;
+  }
+
+  &__logo {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: flex-end;
+    width: auto;
+  }
+}
+
+.spending {
+  padding: 3rem;
+  background-color: $color-very-pale-orange;
+  border-radius: 1.8rem;
+  color: $color-dark-brown;
+  height: auto;
+
+  &__h2 {
+    padding-bottom: 1.5rem;
+  }
+
+  &__main {
+    padding-bottom: 3rem;
+    position: relative;
+    margin: auto;
+
+    &__chart {
+      //   width: 40rem;
+      //   max-width: 500px;
+      //   height: 60rem;
+      //   cursor: none;
+    }
+
+    &__label {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.4rem;
+      filter: opacity(0.4);
+    }
+  }
+
+  &__hr {
+    color: $color-very-pale-orange;
+    filter: opacity(0.4);
+  }
+
+  &__total {
+    padding-top: 3rem;
+
+    &__text {
+      font-size: 1.6rem;
+      opacity: 0.4;
+    }
+
+    &__amount {
+      grid-row: 1 / 3;
+      font-size: 4rem;
+      align-self: center;
+    }
+
+    &__change,
+    &__text--2 {
+      justify-self: flex-end;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto auto;
+      row-gap: 0.6rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .balance {
+    &__balance {
+      font-size: 2.8rem;
+    }
+  }
+
+  .spending {
+    padding: 1.5rem;
+
+    &__h2 {
+      font-size: 2.2rem;
+    }
+
+    &__main {
+      height: 30rem; // 600
+      width: 80vw;
+
+      &__chart {
+        height: 50rem;
+      }
+    }
+
+    &__total {
+      padding-top: 2rem;
+      //   margin-top: 2rem;
+
+      &__amount {
+        font-size: 3.2rem; //375
+      }
+
+      &__container {
+        row-gap: 0.3rem;
+      }
+    }
+  }
+}
