@@ -86,6 +86,9 @@ body {
     padding-bottom: 3rem;
     position: relative;
     margin: auto; }
+    .spending__main__chart {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; }
     .spending__main__label {
       text-align: center;
       font-weight: 400;
@@ -124,7 +127,9 @@ body {
       height: 30rem;
       width: 80vw; }
       .spending__main__chart {
-        height: 50rem; }
+        height: 50rem;
+        padding-left: 0;
+        padding-right: 0; }
     .spending__total {
       padding-top: 2rem; }
       .spending__total__amount {
